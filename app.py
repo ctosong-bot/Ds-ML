@@ -18,4 +18,4 @@ elif st.button("👉 clean_customers"):
 elif st.button("👉 clean_app"):
     st.switch_page("pages/clean_app.py")
 elif st.button("👉 transform_app"):
-    st.switch_page("page/transform_app.py")
+    st.switch_page("pages/transform_app.py")
