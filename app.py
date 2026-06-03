@@ -19,3 +19,5 @@ elif st.button("👉 clean_app"):
     st.switch_page("pages/clean_app.py")
 elif st.button("👉 transform_app"):
     st.switch_page("pages/transform_app.py")
+elif st.button("👉 EDA_app"):
+    st.switch_page("pages/EDA_app.py")
