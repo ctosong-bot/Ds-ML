@@ -72,3 +72,7 @@ with st.container(border=True):
         if st.button("🚛 Truck Predict", use_container_width=True, key="btn_pred2"):
             st.switch_page("pages/truck_predict.py")
         st.caption("โมเดลพยากรณ์รอบรถขนส่ง")
+    with col8:
+        if st.button("🚛 classify_redbull_sale", use_container_width=True, key="btn_pred2"):
+            st.switch_page("pages/classify_redbull_sale.py")
+        st.caption("คาดการ Product ที่มียอดขายสูง")
