@@ -23,5 +23,5 @@ elif st.button("👉 EDA_app"):
     st.switch_page("pages/EDA_app.py")
 elif st.button("👉 sale_predict.app"):
     st.switch_page("sale_predict.py")
-    elif st.button("👉 truck_predict.app"):
+elif st.button("👉 truck_predict.app"):
     st.switch_page("truck_predict.py")
