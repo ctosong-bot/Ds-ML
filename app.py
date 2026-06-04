@@ -1,52 +1,41 @@
 import streamlit as st
 
-# ตั้งค่าหน้าจอ
 st.set_page_config(page_title="Data Science & ML Boot Camp", layout="wide", page_icon="🏠")
 
-# ส่วนหัวข้อ (Header Section)
-st.title("🏠 หน้าหลัก (Main Dashboard)")
-st.subheader("Boot Camp: Data Science and Machine Learning")
+# หัวข้อหลัก
+st.title("🏠 หน้าหลัก (Dashboard)")
+st.markdown("### **Boot Camp: Data Science and Machine Learning**")
 
-# สร้างแถบข้อมูลไฮไลท์ด้านบน
-col_info1, col_info2 = st.columns([2, 1])
-with col_info1:
-    st.info("🚀 7 Day Intensive Hands-on Workshop")
-with col_info2:
-    st.success("👨‍🏫 วิทยากร: Choosak Tosong")
+# เมนูด้านข้าง (Sidebar) สำหรับนำทาง
+with st.sidebar:
+    st.header("📋 เมนูบทเรียน")
+    st.write("Choosak Tosong")
+    st.info("7 Day Intensive Hands-on Workshop")
+    st.markdown(''':rainbow["Operation Excellence"]''')
+    st.caption("Day 1: การจัดการข้อมูลพื้นฐาน")
 
-st.markdown(''':rainbow[**"Operation Excellence"**] ''')
-st.caption("📅 Day 1: การจัดการข้อมูลพื้นฐานและโครงสร้างข้อมูลด้วย Python")
+# ส่วนเนื้อหาหลัก: ใช้ Selectbox ในการเลือกเปลี่ยนหน้า
+st.write("#### 💡 เลือกหัวข้อที่ต้องการตรวจสอบด้านล่าง:")
+
+menu_options = {
+    "--- กรุณาเลือกรายการ ---": None,
+    "💰 ระบบคำนวณส่วนลดตามยอดซื้อ": "pages/app1_discount_calc.py",
+    "👉 การทำความสะอาดข้อมูล": "pages/clean_tong (1).py",
+    "👉 clean_customers": "pages/clean_customers.py",
+    "👉 clean_app": "pages/clean_app.py",
+    "👉 transform_app": "pages/transform_app.py",
+    "👉 EDA_app": "pages/EDA_app.py",
+    "👉 sale_predict.app": "pages/sale_predict.py",
+    "👉 truck_predict.app": "pages/truck_predict.py"
+}
+
+selected_page = st.selectbox("ขั้นตอนการทำงาน (Workflow):", list(menu_options.keys()))
+
+# ถ้าผู้ใช้เลือกเมนู (ที่ไม่ใช่หน้าว่าง) ให้เปลี่ยนหน้าทันที
+if selected_page and menu_options[selected_page]:
+    st.switch_page(menu_options[selected_page])
+
+# แสดงโครงสร้าง Roadmap ของคอร์สแบบสวยงามด้านล่าง
 st.divider()
-
-# ส่วนเมนูเข้าสู่บทเรียน (Navigation Grid)
-st.write("### 🛠️ เลือกโมดูลการเรียนรู้และแอปพลิเคชัน")
-
-# แถวที่ 1: ระบบคำนวณและการทำความสะอาดข้อมูล
-col1, col2, col3, col4 = st.columns(4)
-with col1:
-    if st.button("💰 ระบบคำนวณส่วนลด", use_container_width=True):
-        st.switch_page("pages/app1_discount_calc.py")
-with col2:
-    if st.button("🧹 การทำความสะอาดข้อมูล", use_container_width=True):
-        st.switch_page("pages/clean_tong (1).py")
-with col3:
-    if st.button("👤 clean_customers", use_container_width=True):
-        st.switch_page("pages/clean_customers.py")
-with col4:
-    if st.button("📱 clean_app", use_container_width=True):
-        st.switch_page("pages/clean_app.py")
-
-# แถวที่ 2: การแปลงข้อมูลและการทำโมเดล Predict
-col5, col6, col7, col8 = st.columns(4)
-with col5:
-    if st.button("🔄 transform_app", use_container_width=True):
-        st.switch_page("pages/transform_app.py")
-with col6:
-    if st.button("📊 EDA_app", use_container_width=True):
-        st.switch_page("pages/EDA_app.py")
-with col7:
-    if st.button("📈 sale_predict.app", use_container_width=True):
-        st.switch_page("pages/sale_predict.py")
-with col8:
-    if st.button("🚛 truck_predict.app", use_container_width=True):
-        st.switch_page("pages/truck_predict.py")
+st.write("📌 **Roadmap การเรียนรู้ในเซสชันนี้:**")
+st.text("Data Preparation ➡️ Data Cleaning ➡️ EDA ➡️ Machine Learning Modeling")
