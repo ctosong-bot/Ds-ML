@@ -73,7 +73,7 @@ with st.container(border=True):
     st.write("") # เพิ่มช่องว่างระว่างแถวเล็กน้อย
     
     # ----- แถวที่ 2 -----
-    row2_col1, row2_col2, row2_col3, row2_col4 = st.columns(3)
+    row2_col1, row2_col2, row2_col3 = st.columns(3)
 
     with row2_col1:
         if st.button("🚛 Truck Predict", use_container_width=True, key="btn_pred2"):
@@ -88,12 +88,4 @@ with st.container(border=True):
     with row2_col3:
         if st.button("🧬 Clustering Segment", use_container_width=True, key="btn_pred4"):
             st.switch_page("pages/clustering_segment.py")
-        st.caption("คาดการณ์ Product การจัดกลุ่ม"
-                   
-     with row2_col4:
-        if st.button("🧬 Clustering Segment", use_container_width=True, key="btn_pred4"):
-            st.switch_page("pages/clustering_segment.py")
-        st.caption("คาดการณ์ Product การจัดกลุ่ม"     
-  
-        
-    
+        st.caption("คาดการณ์ Product การจัดกลุ่ม")
