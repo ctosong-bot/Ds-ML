@@ -2,6 +2,48 @@ import streamlit as st
 
 st.set_page_config(page_title="Data Science & ML Boot Camp", layout="wide", page_icon="🏠")
 
+# ================= Custom CSS for Colored Buttons =================
+st.markdown("""
+<style>
+    /* ตั้งค่าปุ่มพื้นฐานให้โค้งมน สวยงาม และข้อความเป็นสีขาว */
+    div.stButton > button {
+        border-radius: 12px;
+        height: 3.5em;
+        font-size: 16px;
+        font-weight: bold;
+        color: white !important;
+        border: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    /* --- ขั้นตอนที่ 1: สีปุ่ม (แถวบน) --- */
+    button[key="btn_calc"] { background-color: #0080ff !important; }     /* น้ำเงิน */
+    button[key="btn_clean1"] { background-color: #2ecc71 !important; }   /* เขียว */
+    button[key="btn_clean2"] { background-color: #e67e22 !important; }   /* ส้ม */
+    button[key="btn_clean3"] { background-color: #9b59b6 !important; }   /* ม่วง */
+    
+    /* --- ขั้นตอนที่ 2: สีปุ่ม (แถวล่าง) --- */
+    button[key="btn_trans"] { background-color: #e74c3c !important; }    /* แดง */
+    button[key="btn_eda"] { background-color: #e84393 !important; }      /* ชมพู */
+    button[key="btn_pred1"] { background-color: #5bc0de !important; }    /* ฟ้าอ่อน */
+    button[key="btn_pred2"] { background-color: #eccc68 !important; color: #2d3436 !important; } /* เหลือง (ตัวหนังสือเข้ม) */
+    button[key="btn_trans1"] { background-color: #f39c12 !important; }   /* ส้มแก่ */
+    button[key="btn_pred4"] { background-color: #2ed573 !important; }    /* เขียวสว่าง */
+
+    /* เอฟเฟกต์เคลื่อนไหวเมื่อเมาส์ชี้ (Hover) */
+    div.stButton > button:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    div.stButton > button:active {
+        transform: translateY(0px);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
 # ================= Header Section =================
 st.title("🏠 Dashboard หน้าหลัก")
 st.write("## Boot Camp: Data Science and Machine Learning")
@@ -17,6 +59,7 @@ with c3:
 
 st.caption("📅 **Day 1 Focus:** การจัดการข้อมูลพื้นฐานและโครงสร้างข้อมูลด้วย Python")
 st.divider()
+
 
 # ================= Navigation & Workflow Section =================
 st.write("### 🛠️ เรียนรู้ตามขั้นตอน (Data Science Workflow)")
@@ -47,6 +90,7 @@ with st.container(border=True):
         st.caption("เคลียข้อมูลดิบจากระบบแอปพลิเคชัน")
 
 st.write("") # เว้นช่องไฟเล็กน้อย
+
 
 # โซนที่ 2: Transformation, EDA & Prediction
 with st.container(border=True):
