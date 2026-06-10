@@ -76,3 +76,7 @@ with st.container(border=True):
         if st.button("🚛 classify_redbull_sale", use_container_width=True, key="btn_pred3"):
             st.switch_page("pages/classify_redbull_sale.py")
         st.caption("คาดการ Product ที่มียอดขายสูง")
+    with col8:
+        if st.button("🚛 clustering_segment", use_container_width=True, key="btn_pred3"):
+            st.switch_page("pages/clustering_segment.py")
+        st.caption("คาดการ Product การจัดกลุ่ม")
