@@ -13,7 +13,7 @@ with c1:
 with c2:
     st.success("👨‍🏫 **Instructor:** Choosak Tosong")
 with c3:
-    st.markdown("<div style='text-align: center; padding: 10px; background-color: #f0f2f6; border-radius: 5px;'>🚀 <b>Operation Excellence</b></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; padding: 10px; background-color: #f0f2f7; border-radius: 5px;'>🚀 <b>Operation Excellence</b></div>", unsafe_allow_html=True)
 
 st.caption("📅 **Day 1 Focus:** การจัดการข้อมูลพื้นฐานและโครงสร้างข้อมูลด้วย Python")
 st.divider()
