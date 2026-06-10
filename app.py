@@ -88,4 +88,4 @@ with st.container(border=True):
     with row2_col3:
         if st.button("🧬 Clustering Segment", use_container_width=True, key="btn_pred4"):
             st.switch_page("pages/clustering_segment.py")
-        st.caption("คาดการณ์ Product การจัดกลุ่ม")/
+        st.caption("คาดการณ์ Product การจัดกลุ่ม")
