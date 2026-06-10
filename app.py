@@ -89,3 +89,19 @@ with st.container(border=True):
         if st.button("🧬 Clustering Segment", use_container_width=True, key="btn_pred4"):
             st.switch_page("pages/clustering_segment.py")
         st.caption("คาดการณ์ Product การจัดกลุ่ม")
+
+
+# ----- แถวที่ 3 (เพิ่มใหม่) -----
+    row3_col1, row3_col2, row3_col3 = st.columns(3)
+    
+    with row3_col1:
+        if st.button("🚀 association_items", use_container_width=True, key="btn_new1"):
+            st.switch_page("pages/association_items.py")
+            st.caption("วิเคราะห์ความสัมพันธ์ของสินค้า")
+            
+    with row3_col2:
+        if st.button("💡 association_recommend", use_container_width=True, key="btn_new2"):
+            st.switch_page("pages/association_recommend")
+            st.caption("แนะนำสินค้าร่วม")
+            
+
