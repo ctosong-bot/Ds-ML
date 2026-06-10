@@ -73,7 +73,7 @@ with st.container(border=True):
     st.write("") # เพิ่มช่องว่างระว่างแถวเล็กน้อย
     
     # ----- แถวที่ 2 -----
-    row2_col1, row2_col2, row2_col3, row02_col4 = st.columns(3)
+    row2_col1, row2_col2, row2_col3, row2_col4 = st.columns(3)
 
     with row2_col1:
         if st.button("🚛 Truck Predict", use_container_width=True, key="btn_pred2"):
