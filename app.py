@@ -89,9 +89,6 @@ with st.container(border=True):
         if st.button("🧬 Clustering Segment", use_container_width=True, key="btn_pred4"):
             st.switch_page("pages/clustering_segment.py")
         st.caption("คาดการณ์ Product การจัดกลุ่ม"
-    with row2_col4:
-        if st.button("🧬 association_items", use_container_width=True, key="btn_pred5"):
-            st.switch_page("pages/association_items.py")
-        st.caption("กฏความสัมพันธ์ การจัดกลุ่ม")
+  
         
     
