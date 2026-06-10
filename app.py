@@ -101,7 +101,7 @@ with st.container(border=True):
             
     with row3_col2:
         if st.button("💡 association_recommend", use_container_width=True, key="btn_new2"):
-            st.switch_page("pages/association_recommend")
+            st.switch_page("pages/association_recommend.py")
         st.caption("แนะนำสินค้าร่วม")
             
 
